@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/*******************************************************/
+/*                      HEADER                         */
+/*******************************************************/
+
+.header {
+    position: static;
+    padding: 10px;
+    background-color: #461D7C;
+    width: 100%;
+}
+
+img { margin-right: 10px; }
+
+.title {  
+    font-size: 17px;
+    color: #FDD023;
+}
+
+/*******************************************************/
+/*                       INFO                          */
+/*******************************************************/
+
+.info {
+    padding: 20px;
+    padding-top: 5px;
+    text-align: left;
+    width: 35%;
+}
+
+/* FORM */
+@media (max-width: 600px) {
+    .courseForm {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+}
+
+.courseForm {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+    gap: 5%;
+    padding: 20px;
+    width: 35%;
+    justify-content: center;
+    margin-top: -30px;
+}
+
+div.selectize-control {
+    .selectize-input {
+        padding: 10px 10px;
+        box-shadow: none;
+    }
+    .single, .multi {
+        padding: 10px 10px;
+    }
+}
+
+.additionalFields {
+    display: none;
+}
+
+/*******************************************************/
+/*                     SCHEDULE                        */
+/*******************************************************/
+
+table {
+    margin: 20px;
+    top: 100px;
+    right: 0;
+    float: right;
+    width: 60%;
+    position: absolute;
+}
+
+table, tr, td, th { border: 1px solid #c0c0c0; }
+
+th {
+    position: sticky;
+    top: 0;
+    padding: 10px;
+	width: 18%;
+    background-color: #fff;
+}
+
+th:first-child { width: 1%; }
+
+td {
+	vertical-align: top;
+	overflow: hidden;
+    background-color: #E5E4E2;
+}
+
+td:first-child { background-color: #fff; }
+  
+table ol {
+	list-style-type: none;
+	padding: 0;
+    margin: -2px;
+	text-align: right;
+}
+
+table li { padding: 1.5em 0.25em; }
+
+.day {
+	position: relative;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+.day div {
+	position: absolute;
+	left: 0;
+	right: 0;
+}

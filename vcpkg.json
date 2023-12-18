@@ -1,0 +1,8 @@
+{
+    "name": "project",
+    "dependencies": [
+        "catch2",
+        "nlohmann-json",
+        "python3"
+    ]
+}

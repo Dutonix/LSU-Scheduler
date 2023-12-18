@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G20 Scheduler</title>
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/selectize.js"></script>
+    <link rel="stylesheet" href="lib/selectize.css" type="text/css"/>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+
+    <!----------------------------------------------->
+    <!-- A header with the LSU logo and page title -->
+    <!----------------------------------------------->
+    <div class="header">
+        <div class="logo">
+            <img src="img/lsuLogo.png" width="180" alt="LSU">
+        </div>
+        <div class="title"><strong>COURSE SCHEDULER</strong></div>
+    </div>
+
+    <!------------------------------------------------------------------>
+    <!-- Information about the webpage: what it is and how to work it -->
+    <!------------------------------------------------------------------>
+    <div class="info">
+        <p>This is a tool based on LSU course offering with additional features and improvements to enhance user’s experience in planning their next semester schedule. Select courses based on any requirements and the scheduler will list the ones that best matches. It’s quick and simple as everything is located on this page.</p>
+    </div>
+
+    <!-------------------------------------------------------------------->
+    <!-- User can select or type in information to search for course(s) -->
+    <!-------------------------------------------------------------------->
+    <form id="courseForm" class="courseForm">
+        <!-- Main fields needed from user before searching for course -->
+        <div oninput="requiredFields()">
+            <!-- DEPARTMENT -->
+            <select id="department" placeholder="DEPARTMENT" name="department">
+                <option value=""></option>
+                <option value="Anthopology">Anthopology</option>
+                <option value="Biology">Biology</option>
+                <option value="Computer Sciences">Computer Sciences</option>
+                <option value="Digital Media">Digital Media</option>
+                <option value="Communications">Communications</option>
+                <option value="Physics">Physics</option>
+                <option value="Electrical Engineering">Electrical Engineering</option>
+                <option value="English">English</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Computer Engineering">Computer Engineering</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="History">History</option>
+                <option value="Film">Film</option>
+                <option value="Music">Music</option>
+                <option value="Psychology">Psychology</option>
+                <option value="Construction Management">Construction Management</option>
+            </select>
+
+            <br>
+
+            <!-- SEMESTER -->
+            <select id="semester" placeholder="SEMESTER" name="semester">
+                <option value=""></option>
+                <option value="Spring24">Spring 2024</option>
+                <option value="Summer24">Summer 2024</option>
+                <option value="Fall23">Fall 2023</option>
+                <option value="Winter23">Winter 2023</option>
+                <option value="Spring23">Spring 2023</option>
+                <option value="Summer23">Summer 2023</option>
+                <option value="Fall22">Fall 2022</option>
+                <option value="Winter22">Winter 2022</option>
+            </select>
+        </div>
+    
+
+        <!-- Additional fields for user to select in narrowing course search-->
+        <div class="additionalFields">
+            <!-- COURSE NUMBER -->
+            <select id="courseNumber" placeholder="COURSE #" name="courseNumber">
+                <option value=""></option>
+                <option value="1010">1010</option>
+                <option value="1234">1234</option>
+                <option value="1347">1347</option>
+                <option value="1350">1350</option>
+                <option value="1351">1351</option>
+                <option value="2259">2259</option>
+                <option value="3380">3380</option>
+                <option value="3501">3501</option>
+                <option value="4101">4101</option>
+                <option value="4103">4103</option>
+                <option value="4402">4402</option>
+                <option value="4444">4444</option>
+            </select>
+
+            <br>
+            
+            <!-- PREFERENCES -->
+            <select id="preferences" multiple placeholder="PREFERENCES" name="preferences">
+                <option value=""></option>
+                <option>NIGHT CLASS</option>
+                <option>50% WEB BASED</option>
+                <option>100% WEB BASED</option>
+                <option>CI-VISUSUAL</option>
+                <option>CI-TECHICAL</option>
+                <option>CI-SPOKEN</option>
+                <option>CI-WRITTEN</option>
+                <option>HONOR</option>
+                <option>AVALIABLE</option>
+            </select>
+        </div>
+    </form>
+
+    <!------------------------------------------------------------------------------------->
+    <!-- A week schedule where user select course(s) and it will appear in the time slot -->
+    <!------------------------------------------------------------------------------------->
+    <div id="schedule">
+        <table id="weekSchedule" border="1" cellspace="3" cellpadding="4">
+            <tr>
+                <th></th>
+                <th>M</th>
+                <th>T</th>
+                <th>W</th>
+                <th>TH</th>
+                <th>F</th>
+            </tr>
+            <tr>
+                <td>
+                    <ol>
+                        <li>7:00</li>
+                        <li>8:00</li>
+                        <li>9:00</li>
+                        <li>10:00</li>
+                        <li>11:00</li>
+                        <li>12:00 PM</li>
+                        <li>1:00</li>
+                        <li>2:00</li>
+                        <li>3:00</li>
+                        <li>4:00</li>
+                        <li>5:00</li>
+                        <li>6:00</li>
+                        <li>7:00</li>
+                        <li>8:00</li>
+                        <li>9:00</li>
+                    </ol>
+                </td>
+                <td><div class="day"></div></td>
+				<td><div class="day"></div></td>
+				<td><div class="day"></div></td>
+				<td><div class="day"></div></td>
+				<td><div class="day"></div></td>
+            </tr>
+        </table>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
